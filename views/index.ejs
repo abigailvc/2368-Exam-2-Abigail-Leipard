@@ -1,21 +1,15 @@
-<!-- Homepage for the Random Currency Conversion Calculator -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Currency Converter</title>
-  <link rel="stylesheet" href="/styles.css">
+    <meta charset="UTF-8">
+    <title>Currency Converter - Exam 2</title>
 </head>
 <body>
-  <h1>Random Currency Conversion Calculator</h1>
+    <h1>Random Currency Conversion</h1>
 
-  <!-- Button the user will click to fetch and display results -->
-  <button id="loadButton">Load</button>
-
-  <!-- Section where the random currency data will appear -->
-  <div id="currencyResults"></div>
-
-  <!-- Adding script at the end to keep HTML loading efficient -->
-  <script src="/script.js"></script>
+    <!-- Only shows this button at first -->
+    <form action="/convert" method="get">
+        <button type="submit">Load</button>
+    </form>
 </body>
 </html>
