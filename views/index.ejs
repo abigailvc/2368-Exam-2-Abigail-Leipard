@@ -1,15 +1,73 @@
+<!--
+CIS 2368 - Summer 2025 - Exam 2
+Portions of this layout, such as the Load button flow, are adapted from Homework 3.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Currency Converter - Exam 2</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Random Currency Conversion</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        margin: 40px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      table {
+        margin: 30px auto;
+        border-collapse: collapse;
+      }
+
+      th, td {
+        padding: 12px 20px;
+        border: 1px solid #ccc;
+      }
+
+      h1 {
+        margin-bottom: 10px;
+      }
+
+      .rate {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
     <h1>Random Currency Conversion</h1>
 
-    <!-- Only shows this button at first -->
-    <form action="/convert" method="get">
+    <% if (!loaded) { %>
+      <form action="/convert" method="get">
         <button type="submit">Load</button>
-    </form>
-</body>
+      </form>
+    <% } else { %>
+      <h2>Conversion from $1 USD</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Currency Code</th>
+            <th>Rate</th>
+            <th>Converted</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% conversions.forEach(curr => { %>
+            <tr>
+              <td><%= curr.code %></td>
+              <td class="rate"><%= curr.rate %></td>
+              <td>$<%= curr.converted %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } %>
+  </body>
 </html>
