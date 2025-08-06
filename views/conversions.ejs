@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversion Results</title>
+</head>
+<body>
+    <h1>Conversion Results (USD)</h1>
+
+    <!-- dynamically rendered currency results -->
+    <ul>
+        <% results.forEach(item => { %>
+            <li>1 USD = <%= item.rate %> <%= item.code %></li>
+        <% }); %>
+    </ul>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>
