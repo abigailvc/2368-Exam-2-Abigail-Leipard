@@ -1,10 +1,10 @@
 {
-  "name": "exam2-abigailleipard",
+  "name": "exam-2-currency-app",
   "version": "1.0.0",
-  "description": "CIS 2368 Exam 2 - Currency Conversion App",
-  "main": "main-server.js",
+  "description": "Random Currency Conversion Calculator",
+  "main": "server.js",
   "scripts": {
-    "start": "node main-server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "axios": "^1.6.7",
