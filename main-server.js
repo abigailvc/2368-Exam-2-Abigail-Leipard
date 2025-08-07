@@ -13,7 +13,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static("public"));
 
 const API_KEY = "1f1492a4c61cc4c96f5c7fe2"; // Replace with your actual key if needed
-const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/USD`;
+const apiUrl = `https://v6.exchangerate-api.com/v6/NEW_API_KEY_HERE/latest/USD`;
 
 // Root route renders the landing page with a Load button
 app.get("/", (req, res) => {
